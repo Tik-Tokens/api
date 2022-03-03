@@ -31,8 +31,7 @@ def mikros():
         input = request.form.get("input")
         # DB stuff
         db.execute("INSERT INTO mikro3mar(alias) VALUES(?)", input)
-        return "Ya estás registrad@"
-
+        return render_template("registrado.html")
     return render_template("mikros.html")
 
 if __name__ == '__main__':

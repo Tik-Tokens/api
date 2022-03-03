@@ -14,6 +14,11 @@ h1 {
     font-weight: 100;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 
 .img-container {
     width: 90%;
@@ -28,6 +33,7 @@ img {
 }
 
 .form-container {
+    width: 90%;
     margin: 10px auto;
     padding: 20px;
     border-radius: 7px;
@@ -56,7 +62,7 @@ form {
 }
 
 .button-form {
-    width: 50%;
+    width: 65%;
     margin: 20px auto;
 }
 
@@ -71,4 +77,17 @@ button {
     box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
     background-color: #fbe9a9;
     color: black;
+}
+
+.contact a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.contact img {
+    width: fit-content;
+    margin-right: 15px;
+    box-shadow: none;
 }
