@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="static/styles/main.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+  </style>
+  <title>Open Mikro</title>
+  <link rel="icon" type="image/png" href="https://img.icons8.com/doodle/48/000000/micro--v1.png" />
+</head>
+<body>
+  <h1>Confirma tu asistencia para el próximo evento de Mikro Abierto!</h1>
+  <div class="img-container">
+    <img src="static/cartel3mar.jpg" alt="cartel evento" />
+  </div>
+  <div class="form-container">
+    <form method="post" action="/mikros" id="mikros-form">
+      <input type="text" class="form-text" id="alias" placeholder="Nombre, alias, email o lo que te de la gana" required
+        name="input">
+    </form>
+  </div>
+  <div class="button-form">
+    <button type="submit" form="mikros-form">🎉 APUNTARSE 🎉</button>
+  </div>
+</body>
+</html>

@@ -1,10 +1,12 @@
-from flask import Flask, redirect, request
+from flask import Flask, redirect, render_template_string, request, render_template
+from cs50 import SQL
 import json
 import communities
 
+
 app = Flask(__name__)
 
-
+db = SQL("sqlite:///mikros.db")
 
 @app.route("/")
 def index():
@@ -19,6 +21,19 @@ def index():
         return json.dumps(community)
 
     return 'Not your day brah'
+
+
+
+
+@app.route("/mikros",  methods=['GET', 'POST'])
+def mikros():
+    if request.method == "POST":
+        input = request.form.get("input")
+        # DB stuff
+        db.execute("INSERT INTO mikro3mar(alias) VALUES(?)", input)
+        return "Ya estás registrad@"
+
+    return render_template("mikros.html")
 
 if __name__ == '__main__':
     app.run(host= '178.79.181.140' ,port=9999, debug=True)
